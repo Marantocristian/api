@@ -15,7 +15,7 @@ class ProductoServiceTest {
     @Test
     void debeCalcularPrecioConDescuento() {
         double resultado = productoService.aplicarDescuento(100.0, 10);
-        assertEquals(95.0, resultado); // FALLO INTENCIONAL
+        assertEquals(90.0, resultado);
     }
 
     @Test
