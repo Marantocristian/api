@@ -1,11 +1,10 @@
 package com.example.api.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 class ProductoServiceTest {
@@ -16,7 +15,7 @@ class ProductoServiceTest {
     @Test
     void debeCalcularPrecioConDescuento() {
         double resultado = productoService.aplicarDescuento(100.0, 10);
-        assertEquals(90.0, resultado);
+        assertEquals(95.0, resultado); // FALLO INTENCIONAL
     }
 
     @Test
